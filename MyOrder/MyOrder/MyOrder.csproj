@@ -43,6 +43,7 @@
     <Compile Include="Model\SaleLineItem.cs" />
     <Compile Include="Model\WareHouse.cs" />
     <Compile Include="Model\Product.cs" />
+    <Compile Include="Persistence\ISQLiteDb.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repository\ProductRepo.cs" />
     <Compile Include="ViewModel\TitleViewModel.cs" />
