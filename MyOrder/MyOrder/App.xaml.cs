@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using MyOrder.View;
 using Xamarin.Forms;
 
 namespace MyOrder
@@ -13,11 +13,7 @@ namespace MyOrder
         {
             InitializeComponent();
 
-            MainPage =new NavigationPage(new MyOrder.WelcomePage())
-            {
-                BarTextColor =  Color.Black,
-                BarBackgroundColor = Color.Bisque
-            };
+            MainPage = new NavigationPage(new Home());
         }
 
         protected override void OnStart()
