@@ -21,7 +21,13 @@ namespace MyOrder
             InitializeComponent();
             //BindingContext = new ContentPageViewModel();
         }
-    }
 
-    
+        private async void Button_OnClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
+       
+    }
 }
+
