@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MyOrder.Model;
+using MyOrder.Persistence;
+using SQLite;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -12,9 +14,18 @@ namespace MyOrder.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProductList : ContentPage
     {
+        private SQLiteAsyncConnection _connection;
+
+        protected override async void OnAppearing()
+        {
+            await _connection.CreateTableAsync<Product>();
+        }
+
         public ProductList()
         {
             InitializeComponent();
+
+            _connection = DependencyService.Get<ISqLiteDb>().GetConnection();
 
             Label homeLabel = new Label()
             {
@@ -37,13 +48,14 @@ namespace MyOrder.View
             };
         }
 
-        public void AllProduct()
+        public void CreateProduct()
         {
             
         }
+        
         public void GetProductByWarehouseId(int wareHouseId)
         {
-            
+            var getProduct = _connection.Table<Product>().Where(x => x.WarehouseId == wareHouseId).ToListAsync();
         }
     }
 }
