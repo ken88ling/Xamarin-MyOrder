@@ -17,7 +17,7 @@ namespace MyOrder.View
             
             InitializeComponent();
 
-            MToolbar();
+           
             
 
             Title = "Hierarchical Navigation";
@@ -25,12 +25,15 @@ namespace MyOrder.View
             Label homeLabel = new Label()
             {
                 Text = "Home Page",
-                FontSize = 40
+                FontSize = 30
             };
 
             btnHome = new Button()
             {
-                Text = "Select Ware house..."
+                Text = "Select Ware house...",
+                FontSize = 25,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center
             };
 
             btnHome.Clicked += async (sender, args) => 
@@ -48,22 +51,6 @@ namespace MyOrder.View
             this.Content = stackLayout;
         }
 
-        public void MToolbar()
-        {
-            ToolbarItems.Clear();
-            ToolbarItems.Add(new ToolbarItem()
-            {
-                Text = "Home",
-                Order = ToolbarItemOrder.Secondary,
-                Command = new Command((() => Navigation.PushAsync(new Home())))
-            });
-
-            ToolbarItems.Add(new ToolbarItem()
-            {
-                Text = "WareHouse",
-                Order = ToolbarItemOrder.Secondary,
-                Command = new Command((() => Navigation.PushAsync(new WareHousePage())))
-            });
-        }
+       
     }
 }

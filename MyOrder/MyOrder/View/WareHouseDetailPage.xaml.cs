@@ -15,7 +15,7 @@ namespace MyOrder.View
         public WareHouseDetailPage(WareHouse item)
         {
             InitializeComponent();
-            
+             MToolbar();
 
             Label titleLabel = new Label()
             {
@@ -40,6 +40,17 @@ namespace MyOrder.View
 
             this.Content = stackLayout;
 
+        }
+
+        public void MToolbar()
+        {
+            ToolbarItems.Clear();
+            ToolbarItems.Add(new ToolbarItem()
+            {
+                Text = "Home",
+                Order = ToolbarItemOrder.Secondary,
+                Command = new Command((() => Navigation.PushAsync(new Home())))
+            });
         }
     }
 }

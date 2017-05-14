@@ -28,6 +28,8 @@ namespace MyOrder.View
                 FontSize = 30
             };
 
+            MToolbar();
+
             ListView listView = new ListView();
             
             listView.ItemsSource = new WareHouse[]
@@ -60,6 +62,24 @@ namespace MyOrder.View
             };
 
             this.Content = stackLayout;
+        }
+
+        public void MToolbar()
+        {
+            ToolbarItems.Clear();
+            ToolbarItems.Add(new ToolbarItem()
+            {
+                Text = "Home",
+                Order = ToolbarItemOrder.Secondary,
+                Command = new Command((() => Navigation.PushAsync(new Home())))
+            });
+
+            ToolbarItems.Add(new ToolbarItem()
+            {
+                Text = "WareHouse",
+                Order = ToolbarItemOrder.Secondary,
+                Command = new Command((() => Navigation.PushAsync(new WareHousePage())))
+            });
         }
     }
 }

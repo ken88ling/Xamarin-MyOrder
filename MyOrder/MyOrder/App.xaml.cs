@@ -9,6 +9,21 @@ namespace MyOrder
 {
     public partial class App : Application
     {
+        //private static Database database;
+        //public static Database MyDatabase
+        //{
+        //    get
+        //    {
+        //        if (database == null)
+        //        {
+        //            database = new Database();
+        //        }
+        //        return database;
+        //    }
+        //}
+
+        //App.MyDatabase.DBConnect();
+
         public App()
         {
             InitializeComponent();

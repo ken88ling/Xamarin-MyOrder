@@ -9,7 +9,8 @@ namespace MyOrder.Model
         public double Price { get; set; }
         public string Category { get; set; }
         public string ImgUrl { get; set; }
-
+        public int WarehouseId { get; set; }
+        
         ObservableCollection<Product>products = new ObservableCollection<Product>();
 
     }
