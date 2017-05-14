@@ -1,4 +1,6 @@
-﻿namespace MyOrder.Model
+﻿using System.Collections.ObjectModel;
+
+namespace MyOrder.Model
 {
     public class Product
     {
@@ -7,5 +9,8 @@
         public double Price { get; set; }
         public string Category { get; set; }
         public string ImgUrl { get; set; }
+
+        ObservableCollection<Product>products = new ObservableCollection<Product>();
+
     }
 }

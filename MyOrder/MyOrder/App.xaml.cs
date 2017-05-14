@@ -14,6 +14,8 @@ namespace MyOrder
             InitializeComponent();
 
             MainPage = new NavigationPage(new Home());
+
+            
         }
 
         protected override void OnStart()
