@@ -2,8 +2,9 @@
 
 namespace MyOrder.Persistence
 {
-    public interface ISqLiteDb
+    public interface ISQLiteDb
     {
         SQLiteAsyncConnection GetConnection();
     }
 }
+
