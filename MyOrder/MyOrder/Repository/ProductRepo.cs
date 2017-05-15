@@ -13,7 +13,7 @@ namespace MyOrder.Repository
 
         public ProductRepo()
         {
-            Database = DependencyService.Get<ISqLiteDb>().GetConnection();
+            Database = DependencyService.Get<ISQLiteDb>().GetConnection();
             Database.CreateTableAsync<Product>();
         }
 

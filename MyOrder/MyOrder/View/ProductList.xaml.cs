@@ -25,7 +25,7 @@ namespace MyOrder.View
         {
             InitializeComponent();
 
-            _connection = DependencyService.Get<ISqLiteDb>().GetConnection();
+            _connection = DependencyService.Get<ISQLiteDb>().GetConnection();
 
             Label homeLabel = new Label()
             {
